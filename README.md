@@ -189,27 +189,43 @@ Step 8: End the program.
 
 ## PROGRAM
 ```
-#include <stdio.h>
-#include <string.h>
-int main() {
-char c1[100], c2[100];
-printf("Enter the first string: ");
-scanf(" %[^\n]", c1);
-getchar(); // consume leftover newline
-printf("Enter the second string: ");
-scanf(" %[^\n]", c2);
-if (strcmp(c1, c2) == 0) {
-printf("Strings are same.\n");
-} else {
-printf("Strings are not same.\n");
+#include<stdio.h>
+int main()
+{
+char c1[100],c2[100];
+int i=0,flag=0;
+printf("Enter the first string:\n");
+scanf("%[^\n]",c1);
+printf("Enter the second string:\n");
+scanf("%s",c2);
+while(c1[i] != '\0' && c2[i] != '\0') 
+{
+    if(c1[i]!=c2[i])
+	{
+        flag=1;
+        break;
+    }
+    i++;
 }
-return 0;
+if(c1[i]!='\0'||c2[i]!='\0')
+{
+    flag=1;
+}
+if(flag==0)
+{
+   printf("Strings are same\n");
+}
+else
+{
+   printf("Strings are not same\n");
+}
 }
 ```
 
 
 ## OUTPUT
- ![image](https://github.com/user-attachments/assets/8989a063-848a-4031-acc5-a06eaa441f18)
+ 
+![Screenshot 2025-04-28 173321](https://github.com/user-attachments/assets/a3599713-beb9-418f-ac9a-fdab00bf4196)
 
 
 ## RESULT
