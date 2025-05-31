@@ -162,9 +162,9 @@ Step 8: End the program.
     char c1[100],c2[100];
     int i=0,flag=0;
     printf("Enter the first string:\n");
-    scanf("%[^\n]",c1);
+    scanf("%[^\n]s",c1);
     printf("Enter the second string:\n");
-    scanf("%s",c2);
+    scanf("%[^\n]s",c2);
     while(c1[i] != '\0' && c2[i] != '\0') 
 	{
         if(c1[i]!=c2[i])
